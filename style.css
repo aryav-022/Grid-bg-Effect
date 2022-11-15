@@ -40,12 +40,30 @@ body {
     width: 100%;
     background-color: #242424;
     transition: all;
-    transition-delay: 2s;
     transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 .grid *:hover {
+    transform: rotate3d(1, 0, 0, 270deg);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.text {
+    position: absolute;
+    font-size: 56px;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    font-family: monospace;
+    right: 15px;
+    bottom: 10px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.hide {
     transform: rotate3d(1, 0, 0, 90deg);
-    transition-delay: 0s;
-    transition-duration: 200ms;
 }

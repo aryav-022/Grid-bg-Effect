@@ -9,3 +9,18 @@ for (let i = 0; i < rows; i++) {
         grid.appendChild(gridElement);
     }
 }
+
+const tiles = grid.children;
+
+for (let tile of tiles) {
+    tile.addEventListener('click', () => {
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < columns; j++) {
+                setTimeout(() => {
+                    const tile = grid.querySelector(`:nth-child(${i*columns + j + 1})`);
+                    tile.classList.add('hide');
+                }, (i + j) * 100);
+            }
+        }
+    })
+}
